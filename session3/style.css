@@ -1,0 +1,768 @@
+:root {
+    --realBlack: #000000;
+    --DarkGray: #555555;
+    --realOrange: #FF782D;
+    --WhiteGray: #F5F5F5;
+    --mainMrgin: 60px;
+    --secondMargin: 30px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+.container{
+    max-width: 1250px;
+    margin: auto;
+}
+
+.main {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main .logo img {
+    width: 50px;
+    height: auto;
+}
+.menu ul {
+    display: flex;
+    gap: 20px;
+    
+}
+.menu ul li a {
+    color: var(--realBlack);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.1s ease-in-out;
+    transition-delay: 0.02s;
+    padding: 27px 8px;
+}
+.menu ul li a:hover {
+    color: var(--realOrange);
+    background-color: var(--WhiteGray);
+}
+.search, .search ul {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--realBlack);
+}
+.search ul li a {
+    color: var(--realBlack);
+    font-size: 18px;
+    font-weight: bold;
+}
+.search .searchIcon img {
+    width: 22px;
+    height: auto;
+    border: 1px solid var(--realOrange);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/** Hero Section Styling **/
+.hero-section {
+    background: url(./assets/bg.png);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 650px;
+    margin-bottom: var(--mainMrgin);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+}
+.content h1{
+    font-size: 40px;
+  }
+  
+.content p {
+    color: var(--DarkGray);
+  }
+  
+.content button {
+    padding: 11px 30px;
+    background-color: var(--realOrange);
+    border-radius: 20px;
+    border: none;
+    color: white;
+  }
+/** Hero Section Styling **/
+
+/** categories Section Styling **/
+.cats {
+    margin-bottom: var(--DarkGray);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mainMrgin);
+    align-items: center;
+}
+.header .catBtn button, .feature .catBtn button{
+    border: 1px solid var(--DarkGray);
+    border-radius: 20px;
+    padding: 11px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--realBlack);
+    font-weight: bold;
+
+}
+.header .title-desc , .feature .feature-title-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gridCards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+    margin-bottom: var(--mainMrgin);
+}
+.gridCards .card {
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid #EAEAEA;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.gridCards .card img {
+    width: 30px;
+}
+
+/** categories Section Styling **/
+
+/** Featured Courses section styling **/
+.features {
+    margin-bottom: var(--mainMrgin);
+    align-items: center;
+}
+.features .feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mainMrgin);
+}
+
+.courseCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: var(--mainMrgin);
+}
+
+.coursesGrid .course {
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid #EAEAEA;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: auto;
+    height: 400px;
+}
+.coursesGrid .course img {
+    width: 100%;
+    height: 50%; 
+    object-fit: cover; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    margin-bottom: 10px;
+}
+.CourseInfo{
+    margin-bottom: var(--mainMrgin);
+    margin-left: 15px;
+}
+.courseTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    line-height: 100%;
+    letter-spacing: 1px;
+    transform: translateY(-12px);
+    margin-bottom: var(--secondMargin);
+}
+.courseTitle h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.courseTitle h3{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.course .cardIcons{
+    display: flex;
+    align-items: center;
+    transform: translateY(-12px);
+}
+
+.course .cardIcons .time, .course .cardIcons .cap{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+      
+}
+.course .cardIcons .time img, .course .cardIcons .cap img{
+    width: 18px;
+}
+.course .cardIcons .time h4, .course .cardIcons .cap h4{
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: lighter; 
+    color: var(--DarkGray);
+}
+.course .cardIcons .cap {
+    transform: translateX(-60px); 
+  }
+.course .courseInfo2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-40px);
+}
+.course .courseInfo2 .price {
+    display: flex;
+    margin-right: 120px;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(104, 187, 107);
+    gap: 20px;
+}
+.course .courseInfo2 .price #price {
+    color: var(--DarkGray);
+    text-decoration: line-through;
+}
+.course .courseInfo2 button {
+    font-size: 25px;
+    color: var(--realBlack);
+    border: none;
+    background-color: transparent;
+    width: 150px;
+}
+
+/**Banner Section Styling **/
+.Banner {
+    background-image: url(./assets/mask.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    height: 250px;
+    margin-bottom: var(--mainMrgin);
+}
+.Banner .BannerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 400px;
+    padding: 40px;
+}
+
+.Banner .BannerContent h4{
+    font-size: 18px;
+    font-weight: 400;
+    color: gray;
+}
+.Banner .BannerContent h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--realBlack);
+}
+.Banner .BannerContent p{
+    margin-top: 15px;
+    font-weight: lighter;
+    font-size: 14px;
+    color: grey;
+    margin-bottom: var(--secondMargin);
+}
+.Banner .BannerContent .BannerBtn{
+    padding: 11px 30px;
+    background-color: var(--realOrange);
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+/**Banner Section Styling **/
+
+/**Informations Section Styling **/
+.Informations {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: var(--mainMrgin);
+}
+.Informations .InformationCard {
+    background-color: var(--WhiteGray);
+    border-radius: 25px;
+    width: 25%;
+    height: 180px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Informations .InformationCard h3 {
+    color: var(--realOrange);
+    font-size: 32px;
+    font-weight: bold;
+}
+.Informations .InformationCard h4 {
+    color: var(--realBlack);
+    font-size: 20px;
+    font-weight: lighter;
+}
+/**Informations Section Styling **/
+
+/** Skills Section Styling **/
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    height: 350px;
+    margin-bottom: 75px;
+}
+.skills .ImageDiv img{
+    width: 75%;
+    height: 100%;
+}
+.skills .ContentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transform: translateX(-75px);
+    gap: 25px;
+}
+.skills .ContentDiv h3 {
+    font-size: 35px;
+    width: 350px;
+}
+.skills .ContentDiv p {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+.skills .ContentDiv ul li {
+    font-size: 16px;
+    width: 450px;
+    font-weight: 400;
+    line-height: 30px;
+}   
+.skills .ContentDiv ul li::before {
+    content: '';
+    background-image: url('./assets/check.png'); 
+    background-size: 20px 20px; 
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    transform: translateY(4px);
+}
+.skills .ContentDiv .SkillsBtn {
+    padding: 11px 30px;
+    background-color: var(--realOrange);
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+/** Skills Section Styling **/
+
+/** 2nd Banner section styling **/
+.seconddBanner {
+    background-image: url(./assets/Banner2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    height: 250px;
+    margin-bottom: var(--mainMrgin);
+}
+.seconddBanner .seconddBannerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(40px);
+}
+.seconddBanner .seconddBannerContent h5 {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.seconddBanner .seconddBannerContent h3 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.seconddBanner .seconddBannerContent p {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.seconddBanner .seconddBannerContent .seconddBannerBtn {
+    padding: 11px 30px;
+    background-color: var(--realOrange);
+    border-radius: 20px;
+    transform: translateY(30px);
+    border: none;
+    color: white;
+}
+/** 2nd Banner section styling **/
+
+/** Feedback section styling **/
+.Feedback {
+    margin-bottom: var(--mainMrgin);
+    align-items: center;
+}
+.Feedback .FeedBackHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--mainMrgin);
+}
+.Feedback .FeedBackHeader h3{
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--realBlack);
+}
+.Feedback .FeedBackHeader h5{
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--DarkGray);
+}
+.FeedBackCards {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: var(--mainMrgin);
+    
+}
+.FeedBackCards .feedBackCard{
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+    height: 230px;
+    gap: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.FeedBackCards .feedBackCard .feedbackContent {
+    transform: translateY(10px);
+}
+.FeedBackCards .feedBackCard .feedbackContent img {
+    width: 40px;
+    left: 0;
+}
+.FeedBackCards .feedBackCard .feedbackContent p{
+    text-align: justify-all;
+    margin-top: var(--secondMargin);
+}
+.FeedBackCards .feedBackCard .feedbackContent h4{
+    font-weight: bold;
+    color: var(--realBlack);
+    margin-top: var(--secondMargin);
+}
+.FeedBackCards .feedBackCard .feedbackContent h5{
+    font-weight: lighter;
+    color: var(--DarkGray);
+    margin-bottom: var(--secondMargin);
+    transform: translateY(10px);
+}
+/** Feedback section styling **/
+
+/** Grad section  styling **/
+.ThirdBanner {
+    background-image: url(./assets/3rdBanner.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    height: 250px;
+    margin-bottom: var(--mainMrgin);
+  
+   
+}
+.ThirdBanner .ThirdBannerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60PX;
+    transform: translateY(20px);
+}
+.ThirdBanner .ThirdBannerContent .leftGradBanner {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.ThirdBanner .ThirdBannerContent .leftGradBanner img {
+    width: 100px;
+    height: auto;
+}
+.ThirdBanner .ThirdBannerContent .leftGradBanner h3 {
+    font-size: 22px;
+}
+.ThirdBanner .ThirdBannerContent .rightGradBanner .thirdBannerBtn1 {
+    padding: 11px 30px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--realOrange);
+    color: var(--realOrange);
+    transform: translateX(90px);
+}
+.ThirdBanner .ThirdBannerContent .rightGradBanner .thirdBannerBtn2 {
+    padding: 11px 30px;
+    background-color: var(--realOrange);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    transform: translateX(100px);
+}
+/** Grad section  styling **/
+
+/** Articles section  styling **/
+.Articless {
+    margin-bottom: var(--DarkGray);
+}
+.articlesHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mainMrgin);
+    align-items: center;
+}
+.articlesHeader .articleBtn button{
+    border: 1px solid var(--DarkGray);
+    border-radius: 20px;
+    padding: 11px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--realBlack);
+    font-weight: bold;
+
+}
+.articlesHeader .article-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Articless .articleGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    margin-bottom: var(--mainMrgin);
+}
+.articleCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: var(--mainMrgin);
+}
+ .articleCard{
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid #EAEAEA;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: auto;
+    height: 400px;
+    width: 395px;
+}
+.articleCard img {
+    width: 100%;
+    height: 50%; 
+    object-fit: cover; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    margin-bottom: 10px;
+}
+.articleCard .articleInfo {
+    margin-bottom: var(--mainMrgin);
+    margin-left: 15px;
+}
+.articleCard .articleInfo .articleIcon{
+    display: flex;
+    align-items: center;
+    transform: translateY(20px);
+}
+
+.articleCard .articleInfo .articleIcon{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+      
+}
+.articleCard .articleInfo .articleIcon img{
+    width: 18px;
+}
+.articleCard .articleInfo .articleIcon h4{
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: bold; 
+    color: var(--realBlack);
+}
+.articleCard .articleInfo p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--DarkGray);
+    transform: translateY(30px);
+    width: 390px;
+}
+
+/** Articles section  styling **/
+
+/** Footer Section Styling **/
+.FooterSection {
+    background-color: var(--WhiteGray);
+    height: 400px;
+}
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    transform: translateY(60px);
+}
+.info {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.info .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.info .logo img{
+    width: 50px;
+    height: auto;
+}
+.info p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--DarkGray);
+}
+
+.Help {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transform: translateY(15px);
+    margin-left: 50px;
+
+}
+.Help h3{
+    font-size: 18px;
+    align-items: center;
+}
+.Help ul {
+    line-height: 45px;
+}
+.Help ul li {
+    font-size: 18px;
+    align-items: center;
+    transform: translateY(-9px);
+    font-weight: bold;
+}
+.Help ul li a {
+    color: var(--DarkGray);
+}
+
+.Programs {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transform: translateY(15px);
+
+
+}
+.Programs h3{
+    font-size: 18px;
+    align-items: center;
+}
+.Programs ul {
+    line-height: 45px;
+}
+.Programs ul li {
+    font-size: 18px;
+    align-items: center;
+    transform: translateY(-9px);
+    font-weight: bold;
+}
+.Programs ul li a {
+    color: var(--DarkGray);
+}
+
+.Contact {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transform: translateY(15px);
+
+}
+.Contact h3{
+    font-size: 18px;
+    align-items: center;
+}
+.Contact ul {
+    line-height: 45px;
+}
+.Contact ul li {
+    font-size: 18px;
+    align-items: center;
+    transform: translateY(-9px);
+    font-weight: bold;
+}
+.FooterSection ul li a {
+    color: var(--DarkGray);
+    transition: color 0.1s ease-in-out;
+    transition-delay: 0.02s;
+}
+.FooterSection ul li a:hover {
+    color: var(--realOrange);
+    
+}
+/** Footer Section Styling **/
